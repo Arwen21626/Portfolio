@@ -1,0 +1,325 @@
+                    /*Polices*/
+@font-face{
+    font-family: 'petemoss';
+    src: url(../fonts/titre/Petemoss/Petemoss-Regular.ttf) format('truetype');
+}
+                    /*Body, header,footer*/
+body{
+    margin : 0 ;
+    padding : 0;
+}
+
+header{
+    background:url(../images/photo/fond_header.png) no-repeat ;
+    background-color: black;
+    padding: 1em;
+    min-height: 100vh;    
+}
+
+header > h1, header > h2{
+    float: right;
+    text-align: right;
+    font-family: 'petemoss';
+    font-size: 6em;
+    letter-spacing: 0.125em;
+    color: #bdfbe8;
+    margin:5%;
+    width: 50%;
+}
+
+footer{
+    background-color: black;
+    color: #bdfbe8;
+    padding: 1em;
+    height: 15vh;
+}
+
+footer > nav > ul > li > a, footer > address > a{
+    color: #bdfbe8;
+}
+
+footer > nav{
+    float: left;
+}
+
+footer > address{
+    float: right;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+                    /*Main*/
+main{
+    margin: 1em;
+}
+                    /*Nav*/
+nav > ul {
+    list-style-type: none;
+}
+
+                    /*Nav fixe + nav projet*/
+.menu, .navProj{
+    position: sticky;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+    
+}
+
+.menu > ul, .navProj > ul{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    padding: 0.5em;
+    margin: 0;
+    background-color: black;
+    height: auto;
+}
+
+.menu > ul > li> a, .navProj > ul > li > a{
+    color: #bdfbe8;
+    text-decoration: none;
+    width: 10em;
+}
+
+                    /*Nav competence*/
+
+li>a{
+    color: #980000;
+}
+
+img+a, address>a{
+    color: black;
+}
+                    /*Texte*/
+
+
+                    /*H*/
+h1, h2, h3, h4{
+    color: #980000;
+    margin : 0;
+}
+
+article + img{
+    width: 25em;
+}
+
+article > img{
+    width: 2em;
+    margin: 0.5em;
+}
+
+                    /*Bloc présentation*/
+section{
+    
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: auto auto;
+}
+
+section > article{
+    grid-column-start: 1;
+
+    display: grid;
+    grid-template-columns: 14% 86%;
+    grid-template-rows: auto auto;
+}
+
+section > img{
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+article :nth-child(1){
+    grid-column-start:1 ;
+    grid-row-start: 1;
+}
+
+article :nth-child(2){
+    grid-column-start: 2;
+    grid-row-start: 1;
+    align-self: center;
+}
+
+article :nth-child(3){
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+}
+
+
+article :nth-child(5){
+     align-self: center;
+}
+
+article :nth-child(6){
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+}
+
+article + img{
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+                    /*Bloc contact*/
+#contact{
+    display: grid;
+    grid-template-columns: 15% 15% 15%;
+    grid-template-rows: auto auto;
+}
+
+#contact > h2{
+    grid-row-end: 2;
+}
+
+#contact > article{
+    grid-row-start: 2;
+    display: grid;
+    grid-template-columns: 15% auto;
+}
+
+#contact > article:nth-child(3){
+    grid-column-start: 2;
+}
+#contact > article:nth-child(4){
+    grid-column-start:3;
+}
+
+#contact > article > img{
+    justify-self: center;
+}
+
+                    /*Classe*/
+.icone{
+    width: 7em;
+}
+
+.tache{
+    display: block;
+}
+
+/*
+.tache{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.tache > img{
+    grid-column-start: 2;
+}
+
+.tache > article {
+    grid-column-start: 1;
+    display: block;
+}
+
+.tache > #S101cap1{
+    grid-row-end: 3;
+    width: 90%;
+}
+.tache > #S101cap2{
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+.tache > #S101cap1, .tache > #S101cap2{
+    margin: 0.5em;
+}
+*/
+/*
+.clComp1{
+    display: none;
+}
+
+.clComp2{
+    display: none;
+}
+
+.clComp3{
+    display: none;
+}
+
+.clComp4{
+    display: none;
+}
+
+.clComp5{
+    display: none;
+}
+
+.clComp6{
+    display: none;
+}
+*/
+
+                    /*Lien*/
+a{
+    padding:0.5em;
+}
+
+img+a{
+    color: #980000;
+}
+
+                    /*Carroussel*/
+
+.carousel {
+    width: 50%;
+    height: 100vh;
+    border-radius: 10px;
+}
+
+.item {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.item.active {
+    display: block;
+}
+
+.item img {
+    width: auto;
+    height: 100vh;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.controls {
+    margin-top: 15px;
+}
+
+.prev, .next {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 18px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.dots {
+    margin-top: 10px;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: gray;
+    border-radius: 50%;
+    margin: 0 6px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: black;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <script src="../js/carroussel.js"></script>
+    <title>Réaliser un développement d'application</title>
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <li><a href="../html/index.html#accueil">Accueil</a></li>
+            <li><a href="../html/index.html#competences">Compétences</a></li>
+            <li><a href="../html/index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Réaliser un développement d'application</h1>
+    </header>
+    <!--
+    <nav class="navProj">
+        <ul>
+            <li>Snake</li>
+        </ul>
+    </nav>
+    -->
+    <main>
+        <section>
+            <article>
+                <img class="icone" src="../images/logo/rose_rouge.png" alt="rose rouge">
+                <h2>Snake</h2>
+                <p>Pour un projet universitaire pendant ma 1ere année de BUT j'ai développé un Snake jouable sur le terminal.</p>
+            </article>
+
+        </section>
+        <h3>Les grandes étapes</h3>
+            <p>Le développement s'est découpé en 4 étapes.</p>
+            <h4>Version 1</h4>
+            <p>Elle consistait à déplacer le serpent automatiquement vers la droite. Le jeu s’arrêtait lorsque le joueur appuyait sur la touche ‘a’.</p>
+            <h4>Version 2</h4>
+            <p>Le plus ? Le serpent peut maintenant se déplacer dans toutes les directions et a le droit de passer sur lui-même.</p>
+            <h4>Version 3</h4>
+            <p>Attention nouvelles contraintes : un plateau délimitant la zone est ajouté ainsi que des pavés désigné par des ‘#’. 
+                Le serpent n’a plus le droit de passer sur un morceau de son corps à partir de cette version (ça évite les noeuds). </p>
+            <h4>Version 4</h4>
+            <p>Cadeau bonus sur le plateau, j'ai ajouté une pomme qui apparaissait aléatoirement sur le plateau. 
+                Quand le serpent la mangeait une autre s’affichait ailleurs.
+                A chaque pomme mangée le serpent grandissait d'un anneau supplémentaire et sa vitesse augmentait légèrement.</p>
+        <h3>La réalisation</h3>
+        <section class="tache">
+            <p>Pour faire un snake il faut d'abord créer un serpent. Pour cela j'ai utilisé un tableau de caractères.
+                Une fois qu'il était créer il fallait le voir ! Compliqué de jouer sans voir son serpent...
+                <br><br>
+                Afin de le créer, j'ai utilisé une boucle qui remplissait 9 cases avec un 'X' qui désigne les anneaux et un 'O' pour la tête.
+                Puis j'ai afficher chaque caractère du tableau les uns à la suite des autres.
+            </p>
+            <p>Maintenant qu'il existe et qu'on peut le voir, il faut qu'il puisse se déplacer!
+                <br>
+                Rien de bien compliqué pour notre super lecteuse.
+                A votre avis, de quoi ai-je eu besoin ?
+                <br> Réponse A : une fleur
+                <br> Réponse B : une boucle
+                <br>
+            Si vous avez choisis la A, je ne sais pas pourquoi mais je serais intrigué de l'utilité que vous avez imaginé.
+            Sinon, je n'ai pas de millions à vous offrir mais plus d'informations.
+            <br>
+            Donc, en utilisant une boucle je regarde si l'utilisateur appuie sur une des touches de directions qui sont "z" (haut), "q" (gauche), "s" (bas) et "d" (droite) ou "a" pour arrêter.
+            Quand un appui est détecté, je cherche sur quelle touche c'est et je l'envoie à la fonction qui vérifie que le serpent à le droit ou pas d'y aller.
+            Si le serpent peut se déplacer dans la direction demandée alors on appelle une autre fonction pour qu'il aille vers celle-ci, sinon il ne se passe rien.
+            Ensuite j'ajoute un plateau, encore une fois j'utilise une boucle! Et hop, j'affiche les bordures. Une fois que c'est fait, il manque les pavés.
+            Rien de bien compliqué, il fallait vérifier que le pavé n'apparaissait pas collé à un bord. J'ai donc enregistré certaines coordonnées pour pouvoir calculer celle qui étaient possibles pour les pavés. Tant que le pavé appparaissait
+            sur une interdite il fallait changer.
+            <br>
+            
+            </p>
+            <div class="controls">
+                <button class="prev">⟨ Précédent</button>
+                <button class="next">Suivant ⟩</button>
+            </div>
+            <div class="dots"></div>
+            <div class="carousel">
+                <div class="item active">
+                     <div class="caption"></div>
+                    <img src="../images/capture/S101V1.png" alt="Image 1">
+                </div>
+                <div class="item">
+                    <div class="caption">Titre de l'image 2</div>
+                    <img src="../images/capture/S101V2.png" alt="Image 2">
+                </div>
+                <div class="item">
+                    <div class="caption">Titre de l'image 2</div>
+                    <img src="../images/capture/S101V3.png" alt="Image 3">
+                </div>
+                <div class="item">
+                    <div class="caption">Titre de l'image 2</div>
+                    <img src="../images/capture/S101V3_2.png" alt="Image 4">
+                </div>
+                <div class="item">
+                     <div class="caption">Titre de l'image 2</div>
+                    <img src="../images/capture/S101V4.png" alt="Image 1">
+                </div>
+                <div class="item">
+                     <div class="caption">Titre de l'image 2</div>
+                    <img src="../images/capture/S101Res.png" alt="Image 1">
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="../html/index.html#accueil">Accueil</a></li>
+                <li><a href="../html/index.html#competences">Compétences</a></li>
+                <li><a href="../html/index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <address>
+            <a href="https://www.linkedin.com/in/arwen-jobit-bernard-483546358">Arwen Jobit-Bernard</a>
+            <a href="mailto:jobit-b.arwen21@bbox.fr">jobit-b.arwen21@bbox.fr</a>
+            <a href="tel:0667012127"> 06 67 01 21 27</a>
+        </address>
+    </footer>    
+</body>
+</html>

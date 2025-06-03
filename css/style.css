@@ -200,7 +200,31 @@ article + img{
 }
 
 .tache{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    
+}
+
+.tache > *{
     display: block;
+}
+
+.tache :nth-child(1){
+    grid-column-end: 2;
+    grid-row-end: 2;
+}
+.tache :nth-child(2){
+    grid-column-start: 2;
+    grid-row-end: 2;
+}
+.tache :nth-child(3){
+    grid-column-end: 2;
+    grid-row-start: 2;
+}
+.tache :nth-child(4){
+    grid-column-start: 2;
+    grid-row-start: 2;
+    
 }
 
 /*
@@ -270,7 +294,6 @@ img+a{
 
 .carousel {
     width: 50%;
-    height: 100vh;
     border-radius: 10px;
 }
 
@@ -299,8 +322,8 @@ img+a{
     padding: 10px 20px;
     margin: 0 10px;
     font-size: 18px;
-    background-color: #333;
-    color: #fff;
+    background-color: #980000;
+    color: #bdfbe8;
     border: none;
     border-radius: 6px;
     cursor: pointer;

@@ -201,13 +201,10 @@ article + img{
 
 .tache{
     display: grid;
-    grid-template-columns: 50% 50%;
-    
+    grid-template-columns: 50% 50%; 
 }
 
-.tache > *{
-    display: block;
-}
+
 
 .tache :nth-child(1){
     grid-column-end: 2;

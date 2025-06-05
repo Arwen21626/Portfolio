@@ -208,6 +208,7 @@ article + img{
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows:20% 80% ;
+    padding: 1em;
 }
 
 .tache > article :nth-child(1){
@@ -216,27 +217,27 @@ article + img{
 }
 
 .tache > article :nth-child(2){
-    grid-row-start: 2b;
+    grid-row-start: 2;
     grid-column-start: 1;
 }
 
-.tache :nth-child(1){
+.tache > :nth-child(1){
     grid-column-start: 1;
     grid-row-end: 2;
+    background-color: #bdfbe8;
 }
 
-.tache :nth-child(2){
+.tache > :nth-child(2){
     grid-column-start: 2;
     grid-row-end: 2;
 }
-.tache :nth-child(3){
+.tache > :nth-child(3){
     grid-column-end: 2;
     grid-row-start: 2;
 }
-.tache :nth-child(4){
+.tache > :nth-child(4){
     grid-column-start: 2;
     grid-row-start: 2;
-    
 }
 
 /*
@@ -320,9 +321,10 @@ img+a{
 }
 
 .item img {
+    max-width: 180vh; /*change ça pour les trucs trop gros*/
     width: auto;
-    height: 100vh;
-    object-fit: cover;
+    height: 60vh;
+    object-fit:contain;
     border-radius: 10px;
 }
 

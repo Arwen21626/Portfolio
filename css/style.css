@@ -204,10 +204,27 @@ article + img{
     grid-template-columns: 50% 50%; 
 }
 
+.tache > article{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows:20% 80% ;
+}
+
+.tache > article :nth-child(1){
+    grid-row-end: 2;
+    grid-column-start: 1;
+}
+
+.tache > article :nth-child(2){
+    grid-row-start: 2b;
+    grid-column-start: 1;
+}
+
 .tache :nth-child(1){
-    grid-column-end: 2;
+    grid-column-start: 1;
     grid-row-end: 2;
 }
+
 .tache :nth-child(2){
     grid-column-start: 2;
     grid-row-end: 2;

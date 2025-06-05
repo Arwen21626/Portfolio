@@ -204,8 +204,6 @@ article + img{
     grid-template-columns: 50% 50%; 
 }
 
-
-
 .tache :nth-child(1){
     grid-column-end: 2;
     grid-row-end: 2;

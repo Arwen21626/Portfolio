@@ -222,77 +222,35 @@ article + img{
 }
 
 .tache > :nth-child(1){
+    margin: 0.25em;
     grid-column-start: 1;
     grid-row-end: 2;
-    background-color: #bdfbe8;
+    border: solid black 0.1em;
+    border-radius: 0.5em;
+
 }
 
 .tache > :nth-child(2){
+    margin: 0.25em;
     grid-column-start: 2;
     grid-row-end: 2;
+    border: solid black 0.1em;
+    border-radius: 0.5em;
 }
 .tache > :nth-child(3){
+    margin: 0.25em;
     grid-column-end: 2;
     grid-row-start: 2;
+    border: solid black 0.1em;
+    border-radius: 0.5em;
 }
 .tache > :nth-child(4){
+    margin: 0.25em;
     grid-column-start: 2;
     grid-row-start: 2;
+    border: solid black 0.1em;
+    border-radius: 0.5em;
 }
-
-/*
-.tache{
-    display: grid;
-    grid-template-columns: 40% 60%;
-}
-
-.tache > img{
-    grid-column-start: 2;
-}
-
-.tache > article {
-    grid-column-start: 1;
-    display: block;
-}
-
-.tache > #S101cap1{
-    grid-row-end: 3;
-    width: 90%;
-}
-.tache > #S101cap2{
-    grid-row-start: 3;
-    grid-row-end: 5;
-}
-
-.tache > #S101cap1, .tache > #S101cap2{
-    margin: 0.5em;
-}
-*/
-/*
-.clComp1{
-    display: none;
-}
-
-.clComp2{
-    display: none;
-}
-
-.clComp3{
-    display: none;
-}
-
-.clComp4{
-    display: none;
-}
-
-.clComp5{
-    display: none;
-}
-
-.clComp6{
-    display: none;
-}
-*/
 
                     /*Lien*/
 a{
@@ -304,9 +262,17 @@ img+a{
 }
 
                     /*Carroussel*/
+.carou{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
 
+.caption{
+    font-size: 20px;
+}
 .carousel {
-    width: 50%;
+    width: 100%;
     border-radius: 10px;
 }
 
@@ -330,6 +296,8 @@ img+a{
 
 .controls {
     margin-top: 15px;
+    display: flex;
+    justify-content: center;
 }
 
 .prev, .next {
@@ -341,10 +309,13 @@ img+a{
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    
 }
 
 .dots {
     margin-top: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .dot {

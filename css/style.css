@@ -336,3 +336,18 @@ img+a{
 .dot.active {
     background-color: black;
 }
+
+                /*Bouton cv*/
+
+.btn-cv {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #980000;
+  color: #bdfbe8;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.btn-cv:hover {
+  background-color: #980000;
+}
